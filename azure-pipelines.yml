@@ -22,6 +22,7 @@ steps:
     goals: 'clean package'
 - task: CopyFiles@2
   inputs:
+    SourceFolder: '$(System.DefaultWorkingDirectory)/webapp/target'
     Contents: '**/.war'
     TargetFolder: '$(build.artifactstagingdirectory)'
 - task: PublishBuildArtifacts@1
